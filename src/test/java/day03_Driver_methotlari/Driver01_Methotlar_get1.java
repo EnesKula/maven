@@ -4,7 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Driver_Methotlar_get1 {
+public class Driver01_Methotlar_get1 {
     public static void main(String[] args) throws InterruptedException {
 
 
@@ -13,7 +13,7 @@ public class Driver_Methotlar_get1 {
          * driver.getTitle( ); Icinde olunan sayfanin basligini String olarak getirir
          * driver.getCurrentUrl( ); Icinde olunan sayfanin Url’ini String olarak getirir
          * driver.getPageSource( ); Icinde olunan sayfanin kaynak kodlarini String olarak getirir
-         * driver.getWindowHandle( );	Icinde olunan sayfa ve/veya tab’larin
+         * driver.getWindowHandle( );	Icinde olunan sayfa ve/veya tab’larin(kimlik numaralarını)
          * driver.getWindowHandles( ); handle degerlerini getirir
          * driver.manage().window().maximize(); calistigimiz browser’i tam sayfa yapar
          * driver.navigate().refresh(); calistigimiz browser’i refresh yapar (yeniler)
@@ -37,9 +37,9 @@ public class Driver_Methotlar_get1 {
         System.out.println("driver.getPageSource() = " + driver.getPageSource());
         System.out.println("driver.getWindowHandle() = " + driver.getWindowHandle());
         System.out.println("driver.getWindowHandle() = " + driver.getWindowHandles());
+        System.out.println("driver.getClass() = " + driver.getClass());
  Thread.sleep(10000);
  driver.quit();
-
 
 
 
