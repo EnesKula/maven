@@ -1,4 +1,4 @@
-package day03_Driver_methotlari;
+package day03_Driver_Methotlari;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +15,10 @@ public class Driver06_Methotlar_Navigate01 {
         Thread.sleep(5000);
         driver.navigate().back();
         Thread.sleep(5000);
+
+
+
+        //! BURADA KALDIK.....
         driver.navigate().forward();
         Thread.sleep(5000);
         driver.navigate().refresh();
