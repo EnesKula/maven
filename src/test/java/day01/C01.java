@@ -22,7 +22,7 @@ UI , API , DataBase
 
         WebDriver driver=new ChromeDriver();
 
-        driver.get("https://www.amazon.com");
+        driver.get("https://www.sahibinden.com");
        Thread.sleep(5000);
         driver.close();
 

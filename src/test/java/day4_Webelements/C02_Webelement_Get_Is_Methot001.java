@@ -8,10 +8,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C02_Webelement_Get_Methot01 {
+public class C02_Webelement_Get_Is_Methot001 {
     public static void main(String[] args) {
+        //!WebElement Get Method’lari
+        //*webElement.getText( );	Web Element uzerindeki yaziyi getirir
+        //* webElement.getAttribute(“Att.ismi” ); Ismi girilen attribute’un degerini getirir
+        //* webElement.getTagName( );	Web elementin tag ismini getirir
+
+        //!WebElement Is Method’lari
+        //? webElement.isEnable( ); Web Element erisilebilir ise true yoksa false doner
+        //? webElement.isDisplayed( ); Web Element gorunur ise true yoksa false doner
+        //? webElement.isSelected( ); Web Element secili ise true yoksa false doner
+
+
         WebDriverManager.chromedriver().setup();
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
@@ -21,7 +32,7 @@ public class C02_Webelement_Get_Methot01 {
 
         // signIn linkini locate edelim
 
-        WebElement signInLinki= driver.findElement(By.id("sign-in"));
+        WebElement signInLinki = driver.findElement(By.id("sign-in"));
 
         System.out.println("size: " + signInLinki.getSize());
         System.out.println("aria role: " + signInLinki.getAriaRole());
