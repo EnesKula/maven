@@ -1,4 +1,4 @@
-package day4_Webelements;
+package day04_Webelements;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
