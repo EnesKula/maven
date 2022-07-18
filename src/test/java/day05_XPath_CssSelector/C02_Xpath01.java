@@ -19,7 +19,8 @@ public class C02_Xpath01 {
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
         //*Add Element butonuna basin
         WebElement addElement=driver.findElement(By.xpath("//button[@onclick=\"addElement()\"]"));
-        //! 3 kere add elemente bas..
+        //! 4 kere add elemente bas..
+        addElement.click();
         addElement.click();
         addElement.click();
         addElement.click();
@@ -38,7 +39,7 @@ public class C02_Xpath01 {
         if (addYazisiElementi.isDisplayed()) {
             System.out.println("add yazisi  gorunuyor testi PASS");
         } else System.out.println("add yazisi gorunuyor testi FAİLDE");
-        driver.close();
+    //    driver.close();
 
 
     }
