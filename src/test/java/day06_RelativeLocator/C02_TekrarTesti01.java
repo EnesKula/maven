@@ -5,11 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import sun.awt.windows.ThemeReader;
 
 import java.time.Duration;
 
 public class C02_TekrarTesti01 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //*https://www.amazon.com/ adresine gidin
         //*Browseri tam sayfa yapin
         //*Sayfayi “refresh” yapin
@@ -28,7 +29,7 @@ public class C02_TekrarTesti01 {
         //2- https://www.amazon.com/ adresine gidin
         driver.get("https://www.amazon.com/");
         //3- Browseri tam sayfa yapin
-        driver.manage().window().maximize();
+       // driver.manage().window().maximize();
         //4-Sayfayi “refresh” yapin
         driver.navigate().refresh();
         //5- Sayfa basliginin “Spend less” ifadesi icerdigini test edin
@@ -39,14 +40,18 @@ public class C02_TekrarTesti01 {
         }else {
             System.out.println("Title testi FAILED \nActual title : " + actualTitle);
         }
+
         //6- Gift Cards sekmesine basin
+       // driver.findElement(By.xpath("//span[@class=\"a-button-inner\"]")).click();
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//a[text()='Gift Cards']")).click();
         //7- Birthday butonuna basin
-        driver.findElement(By.xpath("//img[@alt='Birthday Gift Cards']")).click();
+        driver.findElement(By.xpath("//*[@aria-label=\"Birthday gift cards\"]")).click();
         //8- Best Seller bolumunden ilk urunu tiklayin
         driver.findElement(By.xpath("(//span[@class='a-truncate-cut'])[1]")).click();
         //9- Gift card details’den 25 $’i  secin
-        driver.findElement(By.xpath("//button[@value='25.00']")).click();
+        //driver.findElement(By.xpath("//button[@value="25"]']")).click();
+        driver.findElement(By.xpath("//button[@value=\"25\"]")).click();
         //10-Urun ucretinin 25$ oldugunu test edin
         WebElement fiyatElementi=driver.findElement(By.xpath("//span[@class='a-color-price a-text-bold']"));
         String expectedFiyat="$25.00";
